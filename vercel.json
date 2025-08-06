@@ -3,7 +3,7 @@
   "routes": [
     {
       "src": "/check",
-      "dest": "/api/check.js"
+      "dest": "/api/check"
     }
   ]
 }
