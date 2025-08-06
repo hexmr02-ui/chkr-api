@@ -5,8 +5,14 @@ export default async function handler(req, res) {
   }
 
   const card = req.query.cc;
+
   if (!card) {
-    res.status(400).json({ error: 'Query parameter "cc" is required' });
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json({
+      message: '🧪 Welcome to the CC Checker API endpoint',
+      usage: '/api/check?cc=card|month|year|cvv',
+      example: '/api/check?cc=5121079814754898|05|2029|742'
+    });
     return;
   }
 
